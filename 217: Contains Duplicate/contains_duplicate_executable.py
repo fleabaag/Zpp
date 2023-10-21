@@ -12,6 +12,14 @@ class ContainsDuplicate:
     """
 
     def contains_duplicate(self, nums: [int]) -> bool:
+        """
+        Revisa si dado un arreglo ingresado, existen duplicados
+        en el mismo
+
+        Regresa
+        -------
+            bool : True en caso de existir duplicados. False en caso contrario.
+        """
         nums.sort()
         for i in range (1, len(nums)):
             if nums[i] == nums[i-1]:
@@ -31,7 +39,7 @@ def main():
     for index, value in tests_dic.items():
         output_string_one = f"Arreglo Ingresado: {value}, "
         resultado = ContainsDuplicate.contains_duplicate(value, value)
-        output_string_two = f"Resultado: {resultado}"
+        output_string_two = f"¿Existen Duplicados?: {resultado}"
         print(output_string_one, output_string_two)
 
 if __name__ == "__main__":
