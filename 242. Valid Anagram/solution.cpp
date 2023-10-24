@@ -36,7 +36,7 @@ public:
                 return false;
             }
         }
-
+        
         return true;  // Retorna true si todas las frecuencias coinciden.
     }
 };
